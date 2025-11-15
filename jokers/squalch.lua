@@ -13,7 +13,7 @@ SMODS.Joker{ --:squalch:
             [2] = '{C:attention}Quadratically{} increases',
             [3] = 'if first played hand has',
             [4] = 'exactly {C:attention}4{} {C:spectral}scoring{} cards',
-            [5] = '{C:inactive,s:0.7}(ex. +16, +25, +36, +49...){}'
+            [5] = '{C:inactive,s:0.7}(ex. +1, +4, +9, +16...){}'
         },
         ['unlock'] = {
             [1] = ''
