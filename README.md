@@ -2,5 +2,6 @@ sholium but fun
 (incompatible with sholium itself)
 
 changes from sholium:
-- nerfs to op jokers
+- nerfs
+- free win deletions
 - faster blind scaling
