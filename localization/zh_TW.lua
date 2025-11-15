@@ -298,10 +298,10 @@ return {
 				},
 			},
 			j_sholium_popandawe = {
-				name = "爆炸中請仰視(v39)",
+				name = "爆炸中請仰視",
 				text = {
 					"{C:blue}-8{}籌碼",
-					"{X:blue,C:white}X4{}籌碼",
+					"{X:blue,C:white}X3{}籌碼",
 				},
 			},
 			j_sholium_pouakai = {
@@ -382,7 +382,7 @@ return {
 					"{C:blue}+#2#{}籌碼",
 					"若本回合第一次出牌包含{C:attention}剛好4張牌{}，",
 					"籌碼成長至下一個{C:attention}完全平方數{}",
-					"{C:inactive,s:0.7}(ex. +16, +25, +36, +49...){}",
+					"{C:inactive,s:0.7}(ex. +1, +4, +9, +16...){}",
 				},
 			},
 			j_sholium_stupidowlstall = {
