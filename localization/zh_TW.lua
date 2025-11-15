@@ -193,7 +193,7 @@ return {
 				},
 			},
 			j_sholium_glaivelord = {
-				name = "大刀王(v48+)",
+				name = "大刀王",
 				text = {
 					"每次出牌中{C:attention}非第一次{}計分的牌",
 					"為這張小丑提供{C:blue}+#2#{}籌碼",
