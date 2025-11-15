@@ -1,0 +1,17 @@
+{
+  "id": "sholmod",
+  "name": "Sholmod",
+  "author": [
+    "GreenKookie"
+  ],
+  "description": "this will be fun",
+  "prefix": "sholmod",
+  "main_file": "main.lua",
+  "version": "1.0.0",
+  "priority": 67,
+  "badge_colour": "228922",
+  "badge_text_colour": "FFFFFF",
+  "dependencies": [
+    "Steamodded (>=1.0.0~BETA-0711a)"
+  ],
+}
