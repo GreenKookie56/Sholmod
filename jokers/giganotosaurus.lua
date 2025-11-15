@@ -3,7 +3,7 @@ SMODS.Joker{ --Giganotosaurus
     config = {
         extra = {
             hands = 2,
-            Xmult = 10,
+            Xmult = 4,
             round = 0
         }
     },
