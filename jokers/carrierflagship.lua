@@ -3,7 +3,7 @@ SMODS.Joker{ --Carrier Flagship
     config = {
         extra = {
             chips = 3,
-            odds = 3
+            odds = 4
         }
     },
     loc_txt = {
