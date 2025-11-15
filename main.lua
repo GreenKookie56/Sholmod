@@ -74,7 +74,7 @@ function get_blind_amount(ante)
 		amount = gba(ante)
 	end
 		if ante <= 8 and ante >= 2 then 
-			amount = sigFig(amount ^ 2^((ante-1)/7),2)
+			amount = sigFig(amount * 2^((ante-1)/7),2)
 		elseif ante >= 8 then
 			amount = amount*2
 		end
