@@ -1,5 +1,4 @@
-sholium but fun
-(incompatible with sholium itself)
+idk
 
 changes from sholium:
 - nerfs
