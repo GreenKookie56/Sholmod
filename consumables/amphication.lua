@@ -95,6 +95,6 @@ SMODS.Consumable {
         end
     end,
     can_use = function(self, card)
-        return ((#G.hand.highlighted >= 1 and #G.hand.highlighted <= 2))
+        return (#G.hand.highlighted == 1)
     end
 }
