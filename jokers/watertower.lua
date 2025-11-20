@@ -5,8 +5,6 @@ SMODS.Joker{ --Water Tower
         extra = {
             mult = 0,
             multmod = 3,
-            no = 0,
-            var1 = 0,
             explode = 0
         }
     },
@@ -24,7 +22,7 @@ SMODS.Joker{ --Water Tower
     },
     pos = {
         x = 0,
-        y = 0
+        y = 5
     },
     display_size = {
         w = 71 * 1, 
@@ -33,11 +31,12 @@ SMODS.Joker{ --Water Tower
     cost = 6,
     rarity = 2,
     blueprint_compat = true,
+    demicoloncompat = true,
     eternal_compat = false,
     perishable_compat = false,
     unlocked = true,
     discovered = true,
-    atlas = 'Joker',
+    atlas = 'CustomJokers',
     
     loc_vars = function(self, info_queue, card)
         
@@ -81,9 +80,16 @@ SMODS.Joker{ --Water Tower
                 }
             end
         end
-        if context.cardarea == G.jokers and context.joker_main  then
+        if context.cardarea == G.jokers and context.joker_main then
             return {
                 mult = card.ability.extra.mult
+            }
+        end
+        if context.forcetrigger then
+            local mult_value = card.ability.extra.mult
+            card.ability.extra.mult = (card.ability.extra.mult) + card.ability.extra.multmod
+             return {
+                mult = mult_value
             }
         end
     end
