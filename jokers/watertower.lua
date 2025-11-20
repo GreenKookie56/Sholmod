@@ -46,7 +46,7 @@ SMODS.Joker{ --Water Tower
     
     calculate = function(self, card, context)
         if context.before and context.cardarea == G.jokers  and not context.blueprint then
-            if ((function()
+            function()
                 local current_played = G.GAME.hands[context.scoring_name].played or 0
                 for handname, values in pairs(G.GAME.hands) do
                     if handname ~= context.scoring_name and values.played > current_played and values.visible then
@@ -60,7 +60,6 @@ SMODS.Joker{ --Water Tower
                     end
                 }
             end
-        ))
         if context.cardarea == G.jokers and context.joker_main then
            if to_big((card.ability.extra.mult or 0)) > to_big(60) then
                 return {
