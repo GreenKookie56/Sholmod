@@ -46,13 +46,15 @@ SMODS.Joker{ --Water Tower
     
     calculate = function(self, card, context)
         if context.before and context.cardarea == G.jokers  and not context.blueprint then
-            func = function()
+            if (function()
                 local current_played = G.GAME.hands[context.scoring_name].played or 0
                 for handname, values in pairs(G.GAME.hands) do
                     if handname ~= context.scoring_name and values.played > current_played and values.visible then
                         return false
                     end
                 end
+                return true
+            end)() then
                 return {
                     func = function()
                         card.ability.extra.mult = (card.ability.extra.mult) + card.ability.extra.multmod
@@ -60,8 +62,14 @@ SMODS.Joker{ --Water Tower
                     end
                 }
             end
-        if context.cardarea == G.jokers and context.joker_main then
-           if to_big((card.ability.extra.mult or 0)) > to_big(60) then
+        end
+        if context.cardarea == G.jokers and context.joker_main  then
+            return {
+                mult = card.ability.extra.mult
+            }
+        end
+        if context.after and context.cardarea == G.jokers  and not context.blueprint then
+            if to_big((card.ability.extra.mult or 0)) > to_big(60) then
                 return {
                     func = function()
                         local target_joker = card
@@ -70,7 +78,7 @@ SMODS.Joker{ --Water Tower
                             target_joker.getting_sliced = true
                             G.E_MANAGER:add_event(Event({
                                 func = function()
-                                    target_joker:explode({G.C.RED}, nil, 1.6)
+                                    target_joker:start_dissolve({G.C.RED}, nil, 1.6)
                                     return true
                                 end
                             }))
@@ -79,12 +87,7 @@ SMODS.Joker{ --Water Tower
                         return true
                     end
                 }
-                end
             end
-         elseif to_big((card.ability.extra.mult or 0)) <= to_big(60) then
-            return {
-                mult = card.ability.extra.mult
-            }
         end
         if context.forcetrigger then
             local mult_value = card.ability.extra.mult
