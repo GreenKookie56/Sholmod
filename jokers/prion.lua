@@ -2,7 +2,7 @@ SMODS.Joker{ --Prion
     key = "prion",
     config = {
         extra = {
-            odds = 3,
+            odds = 4,
             ante_value = 1
         }
     },
@@ -35,14 +35,14 @@ SMODS.Joker{ --Prion
     atlas = 'CustomJokers',
 
     loc_vars = function(self, info_queue, card)
-        local new_numerator, new_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'j_sholium_prion') 
+        local new_numerator, new_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'j_sholmod_prion') 
         return {vars = {new_numerator, new_denominator}}
     end,
 
     calculate = function(self, card, context)
         if context.end_of_round and context.main_eval and G.GAME.blind.boss  then
             if true then
-                if SMODS.pseudorandom_probability(card, 'group_0_ebc71fee', 1, card.ability.extra.odds, 'j_sholium_prion', false) then
+                if SMODS.pseudorandom_probability(card, 'group_0_ebc71fee', 1, card.ability.extra.odds, 'j_sholmod_prion', false) then
               SMODS.calculate_effect({func = function()
                     local mod = -card.ability.extra.ante_value
 		ease_ante(mod)
