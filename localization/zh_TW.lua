@@ -32,6 +32,22 @@ return {
 					"{C:red}+#1#{}倍率",
 				},
 			},
+			j_sholmod_adeck = {
+				name = "一副牌",
+				text = {
+					"提供相當於一副{C:attention}標準撲克牌{}",
+					"的{C:blue}籌碼{}{C:inactive}(+380){}",
+				},
+			},
+			j_sholmod_bacteria = {
+				name = "細菌",
+				text = {
+					"{C:blue}+#1#{}籌碼",
+					"{C:red}+#2#{}倍率",
+                    "選擇{C:attention}盲注{}時複製這張牌",
+                    "{C:inactive}(移除{}{C:dark_edition}負片{}，{C:inactive}必須有空間){}",
+				},
+			},
 			j_sholmod_barracuda = {
 				name = "梭魚",
 				text = {
@@ -46,11 +62,41 @@ return {
 					"永久獲得{C:red}+6{}倍率",
 				},
 			},
+			j_sholmod_bioweapon = {
+				name = "生化武器",
+				text = {
+					"結束階段，這張小丑獲得{X:red,C:white}X#2#{}倍率",
+					"{C:inactive}(目前{}{X:red,C:white}X#1#{}{C:inactive}倍率){}",
+				},
+			},
 			j_sholmod_bloonchipper = {
 				name = "氣球吸塵器",
 				text = {
 					"進入{C:attention}盲注{}時，{C:red}+#1#{}棄牌次數",
 					"每個{C:attention}底注{}有{C:green}#4#/#5#{}機率棄牌數量{C:red}+#2#{}",
+				},
+			},
+			j_sholmod_boundary = {
+				name = "臨界",
+				text = {
+					"lim {C:attention}n{} -> {X:dark_edition,C:white}正無窮{}",
+					"{X:red,C:white}X1.444667861^^n{}倍率",
+					"{C:inactive,s:0.6}解釋:e^e^-1剛剛好有1個{}",
+					"{C:inactive,s:0.6}f(x)=a^x的不動點，即e{}",
+					"{C:inactive,s:0.6}這意味著(e^e^-1)^^正無窮，或{}",
+					"{C:inactive,s:0.6}(e^e^-1)^(e^e^-1)^...無限堆的指數塔{}",
+					"{C:inactive,s:0.6}不會發散出不動點之外{}",
+					"{C:inactive,s:0.6}1.444667861是e^e^-1的近似{}",
+					"{C:inactive,s:0.6}剛好有兩個f(x)=a^x的不動點{}",
+					"{C:inactive,s:0.6}其中數值較小者趨近於2.718{}",
+				},
+			},
+			j_sholmod_brickell = {
+				name = "海軍上將",
+				text = {
+					"重骰時獲得{X:red,C:white}X#2#{}倍率",
+					"回合結束時重製",
+                    "{C:inactive}(目前{}{X:red,C:white}X#1#{}{C:inactive}倍率){}",
 				},
 			},
 			j_sholmod_carrierflagship = {
@@ -100,6 +146,13 @@ return {
 					"購買此牌時{C:gold}+$1{}",
 				},
 			},
+			j_sholmod_fungus = {
+				name = "真菌",
+				text = {
+					"{X:red,C:white}X#1#{}倍率",
+					"選擇{C:attention}盲注{}時{C:blue}+#2#{}出牌",
+				},
+			},
 			j_sholmod_giganotosaurus = {
 				name = "南方巨獸龍",
 				text = {
@@ -142,11 +195,25 @@ return {
 					"購買此牌時{C:gold}+$#2#{}且{C:red}+#1#{}底注",
 				},
 			},		
+			j_sholmod_nanovirus = {
+				name = "奈米病毒",
+				text = {
+					"購買任意一張牌時獲得{C:gold}$2{}",
+				},
+			},
 			j_sholmod_orca = {
 				name = "逆戟鯨(v36.0-36.1)",
 				text = {
 					"{X:red,C:white}X#2#{}倍率",
 					"擊敗{C:attention}Boss盲注{}後設為{X:red,C:white}X#1#{}倍率",
+				},
+			},
+			j_sholmod_parasite = {
+				name = "寄生蟲",
+				text = {
+					"這張小丑在最後一次出牌時",
+					"獲得{C:red}+#2#{}倍率",
+					"{C:inactive}(目前{}{C:red}+#1#{}{C:inactive}倍率){}",
 				},
 			},
 			j_sholmod_patfusty = {
@@ -163,11 +230,47 @@ return {
 					"{X:blue,C:white}X3{}籌碼",
 				},
 			},
+			j_sholmod_pouakai = {
+				name = "食人鳥(v36-38)",
+				text = {
+					"進入{C:attention}盲注{}時{X:attention,C:white}=#2#{}手牌大小",
+					"出牌時{C:attention}+#1#{}手牌大小",
+				},
+			},
+			j_sholmod_prion = {
+				name = "阮病毒",
+				text = {
+					"擊敗Boss盲注時",
+					"{C:green}#1#/#2#{}機率{C:attention}-1{}底注",
+				},
+			},
 			j_sholmod_sealpurple = {
 				name = "紫色隱者",
 				text = {
 					"{C:attention}-1{}手牌大小",
 					"棄牌時隨機產生一張{C:tarot}塔羅牌{}",
+				},
+			},
+			j_sholmod_sealred = {
+				name = "紅色魔術師",
+				text = {
+					"{C:attention}-1{}手牌大小",
+					"重新觸發所有打出的牌",
+				},
+			},
+			j_sholmod_sealgold = {
+				name = "白金之星",
+				text = {
+					"{C:attention}-1{}手牌大小",
+					"出牌時獲得{C:gold}$3{}",
+				},
+			},
+			j_sholmod_sealblue = {
+				name = "綠色法皇",
+				text = {
+					"{C:attention}-1{}手牌大小",
+					"回合結束時產生上個{C:attention}牌型{}的{C:planet}星球牌{}",
+					"{C:inactive}不是，這不是綠色的吧...{}",
 				},
 			},
 			j_sholmod_rosalia = {
@@ -196,6 +299,22 @@ return {
 				text = {
 					"每{C:attention}5{}次出牌{C:red}+55{}倍率",
 					"{C:inactive}剩餘#1#次{}",
+				},
+			},
+			j_sholmod_virus = {
+				name = "病毒",
+				text = {
+					"回合結束時，",
+					"產生一張{C:rare}稀有{}小丑",
+				},
+			},
+			j_sholmod_watertower = {
+				name = "水塔",
+				text = {
+					"這張小丑獲得{C:red}+#2#{}倍率",
+					"若打出的牌型為{C:attention}最常打出{}的牌型",
+					"{C:inactive}(目前{}{C:red}+#1#{}{C:inactive}倍率){}",
+					"累積倍率超過{C:attention}60{}時{C:reed}爆炸{}"
 				},
 			},
                },
