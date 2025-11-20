@@ -3,7 +3,7 @@ SMODS.Joker{ --Clubism
     config = {
         extra = {
             mult = 1,
-            mod = 3
+            mod = 0.3
         }
     },
     loc_txt = {
